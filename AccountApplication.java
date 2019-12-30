@@ -1,28 +1,33 @@
-package abcd;
+package utils;
+
+import java.util.Scanner;
 
 public class AccountApplication {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Account account=new Account();
-		Account account1=new Account(2345,"Dingo",23456);
-		Account account2=new Account(2377,"Bingu");
-		Account account3=new Account(6788);
-		account.setAccountNumber(1123);
-		account.setCustomerName("Dodong");
-		account.setBalance(60000);
-		System.out.println(account.getAccountNumber());
-		System.out.println(account.getCustomerName());
-		System.out.println(account.getBalance());
-		System.out.println(account1.getAccountNumber());
-		System.out.println(account1.getCustomerName());
-		System.out.println(account1.getBalance());
-		System.out.println(account2.getAccountNumber());
-		System.out.println(account2.getCustomerName());
-		System.out.println(account2.getBalance());
-		System.out.println(account3.getAccountNumber());
-		System.out.println(account3.getCustomerName());
-		System.out.println(account3.getBalance());
+		AccountOperations oper = new AccountOperations();
+		int k=1;
+		while(k!=2){
+			System.out.println("1:Deposit");
+			System.out.println("2:Withdraw");
+			System.out.println("3:Check Balance");
+			System.out.println("4:Exit");
+			Scanner sc=new Scanner(System.in);
+			int i=sc.nextInt();
+			switch(i){
+				case 1:oper.deposit(sc.nextInt(),sc.nextInt());
+					break;
+				case 2:oper.withdraw(sc.nextInt(),sc.nextInt());
+					break;
+				case 3:oper.checkBalance(sc.nextInt());
+					break;
+				case 4:k++;
+					break ;
+						
+			}
+			
+		}
+		//exit: System.out.println("End of Transactions");
 	}
 
 }

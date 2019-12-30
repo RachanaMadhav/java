@@ -1,44 +1,34 @@
-package abcd;
+package utils;
 
 public class Account {
-
-		private int accountNumber;
-		private String customerName;
-		private double balance;
+	public Account(int accno, String custname, double balance) {
+		super();
+		this.accno = accno;
+		this.custname = custname;
+		this.balance = balance;
+	}
+	private int accno;
+	private String custname;
+	private double balance; 
+	public Account(){
 		
-		public Account(){
-			
-		}
-		public Account(int accountNumber){
-			this.accountNumber=accountNumber;
-		}
-		public Account(int accountNumber,String customerName){
-			this.accountNumber=accountNumber;
-			this.customerName=customerName;
-			}
-		public Account(int accountNumber,String customerName,double balance){
-			this.accountNumber=accountNumber;
-			this.customerName=customerName;
-			this.balance=balance;
-		}
-		
-		public int getAccountNumber() {
-			return accountNumber;
-		}
-		public void setAccountNumber(int accountNumber) {
-			this.accountNumber = accountNumber;
-		}
-		public String getCustomerName() {
-			return customerName;
-		}
-		public void setCustomerName(String customerName) {
-			this.customerName = customerName;
-		}
-		public double getBalance() {
-			return balance;
-		}
-		public void setBalance(double balance) {
-			this.balance = balance;
-		}
-		
+	}
+	public int getAccno() {
+		return accno;
+	}
+	public void setAccno(int accno) {
+		this.accno = accno;
+	}
+	public String getCustname() {
+		return custname;
+	}
+	public void setCustname(String custname) {
+		this.custname = custname;
+	}
+	public double getBalance() {
+		return balance;
+	}
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
 }
